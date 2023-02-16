@@ -4,6 +4,6 @@ COPY . /app
 WORKDIR /app
 RUN apt-get update
 RUN pip install -r requirements.txt 
-EXPOSE 8000
+EXPOSE 5000
 CMD ["python3","app.py", "--host", "0.0.0.0", "--port", "5000"]
 
