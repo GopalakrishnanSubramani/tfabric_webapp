@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Threat Fabric MLOPS Challenge</h1>
+  <h1>User Recognition based on their Keystroke data</h1>
+  <h1></h1>
+  <h1>Choose model SVM or RF or XGB</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Model" placeholder="Model" required="required" /><br>
+      <input type="text" name="HT_mean" placeholder="HT_mean" required="required" /><br>
+    	<input type="text" name="HT_dev" placeholder="HT_dev" required="required" /><br>
+        <input type="text" name="PPT_mean" placeholder="PPT_mean" required="required" /><br>
+        <input type="text" name="PPT_dev" placeholder="PPT_dev" required="required" /><br>
+        <input type="text" name="RRT_mean" placeholder="RRT_mean" required="required" /><br>
+        <input type="text" name="RRT_dev" placeholder="RRT_dev" required="required" /><br>
+        <input type="text" name="RPT_mean" placeholder="RPT_mean" required="required" /><br>
+        <input type="text" name="RPT_dev" placeholder="RPT_dev" required="required" /><br>       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
